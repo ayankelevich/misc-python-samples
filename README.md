@@ -1,3 +1,3 @@
 ###################
-# python-aws-labs #
+# python-samples  #
 ###################
