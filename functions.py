@@ -36,3 +36,9 @@ def factorial(n):
     return (n*factorial(n-1) if n > 1 else 1)
 
 print(factorial(9))
+
+print_args(['blah', 'yadda', '========='], ('one', 2), {'three':3})
+
+print(fYieldTest())
+print([fYieldTest()])
+print(list(fYieldTest()))

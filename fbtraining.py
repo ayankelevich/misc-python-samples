@@ -61,6 +61,11 @@ def get_median(input_list):
 
 print(get_median(list17))
 # List and Set from range
+# yield returns an iterator object, not a list
+def my_range(upper: int):
+    for i in range(upper):
+        yield i     # returns value without resetting the local vars and continues
+
 squares_list = [i ** 2 for i in list(my_range(6))]  # list comprehension
 squares_set = {i ** 2 for i in list(my_range(6))}
 squares_dict = {i: i**2 for i in list(my_range(6))}
@@ -79,8 +84,6 @@ print(bla, bla3)  # 1-A-B-3
 import re
 print(re.split(r'\s+', "    one   two three   ".lstrip().rstrip()))
 
-
-print_args(['blah', 'yadda', '========='], ('one', 2), {'three':3})
 
 var = 'xxaxxaxxaxx'
 count = 0
@@ -105,16 +108,13 @@ print(((big * 5 + small) >= goal) and (goal % 5 <= small))
 #  Who wore it better ???
 print(map(lambda k: k ** 2, [2, 3, 4]))
 print(k ** 2 for k in [2, 3, 4])
-print(fYieldTest())
 
 print([map(lambda k: k ** 2, [2, 3, 4])])
 print([k ** 2 for k in [2, 3, 4]])
 print({k**2 for k in [2, 3, 4]})
-print([fYieldTest()])
 
 print(list(map(lambda k: k ** 2, [2, 3, 4])))
 print(list(k ** 2 for k in [2, 3, 4]))
-print(list(fYieldTest()))
 
 print(__file__)
 
@@ -137,8 +137,6 @@ print(res_4)
 print(all([]), any([]))
 # To correct, check the list itself
 print(bool([]) and all([]), any([]))
-
-
 
 print(__name__)
 
